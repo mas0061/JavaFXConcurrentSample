@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="childPane" prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Button id="pushButton" fx:id="okButton" layoutX="132.0" layoutY="91.0" mnemonicParsing="false" text="OK" />
+  </children>
+</AnchorPane>
