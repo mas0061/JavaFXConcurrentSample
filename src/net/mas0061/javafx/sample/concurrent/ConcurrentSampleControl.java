@@ -11,7 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import net.mas0061.javafx.sample.child.ChildScreen;
 
 public class ConcurrentSampleControl implements Initializable {
 
@@ -24,6 +27,8 @@ public class ConcurrentSampleControl implements Initializable {
   @FXML
   private Button stopButton;
   @FXML
+  private Button childButton;
+  @FXML
   private ProgressBar sampleBar;
   @FXML
   private ProgressIndicator sampleIndicator;
@@ -32,8 +37,11 @@ public class ConcurrentSampleControl implements Initializable {
 
   @Override
   public void initialize(URL arg0, ResourceBundle arg1) {
-    msgLabel.setTextFill(Color.RED);
-    msgLabel.setText("initialize.");
+//    msgLabel.setTextFill(Color.RED);
+//    msgLabel.setText("initialize.");
+//    System.out.println("start -> " + startButton.focusedProperty().toString());
+//    System.out.println("stop  -> " + stopButton.focusedProperty().toString());
+//    System.out.println("push  -> " + pushButton.focusedProperty().toString());
   }
 
   @FXML
@@ -84,6 +92,18 @@ public class ConcurrentSampleControl implements Initializable {
   protected void push(ActionEvent event) {
     msgLabel.setTextFill(Color.BLACK);
     msgLabel.setText("push");
+  }
+
+  @FXML
+  protected void child(ActionEvent event) {
+	  ChildScreen childScreen = new ChildScreen();
+	  Stage stage = new Stage();
+	  childScreen.start(stage);
+  }
+
+  @FXML
+  protected void releaseKey(KeyEvent event) {
+	msgLabel.setText(event.getCode().toString());
   }
 
 }
