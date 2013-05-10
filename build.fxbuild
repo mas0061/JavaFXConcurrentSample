@@ -1,6 +1,8 @@
-jfx.build.stagingdir = ${workspace}/JavaFXConcurrentSample/build
-jfx.build.apptitle = JavaFXConcurrentSample
-jfx.build.vendorname = mas0061.net
-jfx.build.appversion = 1.0
-jfx.build.applicationClass = net.mas0061.javafx.sample.concurrent.ConcurrentSampleMain
-jfx.deploy.nativePackage = true
+<?xml version="1.0" encoding="UTF-8"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://at.bestsolution.efxclipse.tooling.jdt/1.0" buildDirectory="${workspace}/JavaFXConcurrentSample/build">
+  <deploy>
+    <application name="JavaFXConcurrentSample" mainclass="net.mas0061.javafx.sample.concurrent.ConcurrentSampleMain" version="1.0"/>
+    <info vendor="mas0061.net"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>
